@@ -172,16 +172,20 @@
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    overflow-x: auto;
     gap: 15px;
     padding: 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
 }
 
 .gallery img {
-    width: 100%;
+    flex: 0 0 auto;
+    width: 350px;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
     display: block;
+    scroll-snap-align: start;
 }

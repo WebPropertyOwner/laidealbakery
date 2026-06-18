@@ -605,7 +605,10 @@
       <div class="why-card"><div class="icon-bubble">👨‍🍳</div><h3>Authentic Recipes</h3><p>Traditional recipes passed down through generations.</p></div>
       <div class="why-card"><div class="icon-bubble">❤️</div><h3>Friendly Service</h3><p>Welcoming staff committed to making every visit special.</p></div>
       
-      <div class="gallery">
+     <div class="carousel-container">
+    <button class="carousel-btn prev">&#10094;</button>
+
+    <div class="carousel">
     <img src="assets/bread.jpg" alt="Photo 1">
     <img src="assets/bun.jpg" alt="Photo 2">
     <img src="assets/bunch.jpg" alt="Photo 3">
@@ -623,6 +626,46 @@
     <img src="assets/strudel.jpg" alt="Photo 15">
     <img src="assets/variety.jpg" alt="Photo 16">       
 </div>
+          <button class="carousel-btn next">&#10095;</button>
+</div>
+
+      <script>
+const carousel = document.querySelector('.carousel');
+const slides = document.querySelectorAll('.carousel img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+
+function showSlide() {
+    carousel.style.transform =
+        `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() {
+    index++;
+    if (index >= slides.length) {
+        index = 0;
+    }
+    showSlide();
+}
+
+function prevSlide() {
+    index--;
+    if (index < 0) {
+        index = slides.length - 1;
+    }
+    showSlide();
+}
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+// Auto-play every 4 seconds
+setInterval(nextSlide, 4000);
+
+showSlide();
+</script>
       
       <div class="why-card"><div class="icon-bubble">🌾</div><h3>Quality Ingredients</h3><p>Only carefully selected ingredients go into every recipe.</p></div>
       <div class="why-card"><div class="icon-bubble">👨‍👩‍👧</div><h3>Community Favorite</h3><p>Proudly serving local families and celebrations.</p></div>

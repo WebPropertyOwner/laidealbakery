@@ -170,3 +170,60 @@
 @utility shadow-lift {
   box-shadow: var(--shadow-lift);
 }
+.why-us {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-tag {
+    color: #b97a57;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.why-us h2 {
+    font-size: 2.5rem;
+    margin: 10px 0 15px;
+    color: #3a2a20;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.why-card {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    transition: transform .3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-bubble {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #f4e6db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}

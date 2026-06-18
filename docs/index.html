@@ -593,88 +593,88 @@
     </div>
   </div>
 </section>
-
-   <div class="carousel-container">
-    <button class="carousel-btn prev">&#10094;</button>
-
-    <div class="carousel">
-    <img src="assets/bread.jpg" alt="Photo 1">
-    <img src="assets/bun.jpg" alt="Photo 2">
-    <img src="assets/bunch.jpg" alt="Photo 3">
-    <img src="assets/buns.jpg" alt="Photo 4">
-    <img src="assets/cakes (1).jpg" alt="Photo 5">
-    <img src="assets/donut.jpg" alt="Photo 6">
-    <img src="assets/dough.jpg" alt="Photo 7">
-    <img src="assets/long.jpg" alt="Photo 8">
-    <img src="assets/milkjello.jpg" alt="Photo 9">
-    <img src="assets/more.jpg" alt="Photo 10">
-    <img src="assets/overlook2.jpg" alt="Photo 11">
-    <img src="assets/overlook3.jpg" alt="Photo 12">
-    <img src="assets/overlook4.jpg" alt="Photo 13">
-    <img src="assets/puff.jpg" alt="Photo 14">
-    <img src="assets/strudel.jpg" alt="Photo 15">
-    <img src="assets/variety.jpg" alt="Photo 16">       
-</div>
-          <button class="carousel-btn next">&#10095;</button>
-</div>
-  
 <section class="why">
   <div class="container">
+
     <div class="section-head">
       <span class="script">Why neighbors love us</span>
       <h2>A bakery that feels like home</h2>
     </div>
+
+    <!-- TOP 3 CARDS -->
     <div class="why-grid">
-      <div class="why-card"><div class="icon-bubble">✨</div><h3>Fresh Daily</h3><p>Every item is baked fresh to ensure the best flavor and quality.</p></div>
-      <div class="why-card"><div class="icon-bubble">👨‍🍳</div><h3>Authentic Recipes</h3><p>Traditional recipes passed down through generations.</p></div>
-      <div class="why-card"><div class="icon-bubble">❤️</div><h3>Friendly Service</h3><p>Welcoming staff committed to making every visit special.</p></div>
-      
-    
+      <div class="why-card">
+        <div class="icon-bubble">✨</div>
+        <h3>Fresh Daily</h3>
+        <p>Every item is baked fresh to ensure the best flavor and quality.</p>
+      </div>
 
-      <script>
-const carousel = document.querySelector('.carousel');
-const slides = document.querySelectorAll('.carousel img');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+      <div class="why-card">
+        <div class="icon-bubble">👨‍🍳</div>
+        <h3>Authentic Recipes</h3>
+        <p>Traditional recipes passed down through generations.</p>
+      </div>
 
-let index = 0;
-
-function showSlide() {
-    carousel.style.transform =
-        `translateX(-${index * 100}%)`;
-}
-
-function nextSlide() {
-    index++;
-    if (index >= slides.length) {
-        index = 0;
-    }
-    showSlide();
-}
-
-function prevSlide() {
-    index--;
-    if (index < 0) {
-        index = slides.length - 1;
-    }
-    showSlide();
-}
-
-nextBtn.addEventListener('click', nextSlide);
-prevBtn.addEventListener('click', prevSlide);
-
-// Auto-play every 4 seconds
-setInterval(nextSlide, 4000);
-
-showSlide();
-</script>
-      
-      <div class="why-card"><div class="icon-bubble">🌾</div><h3>Quality Ingredients</h3><p>Only carefully selected ingredients go into every recipe.</p></div>
-      <div class="why-card"><div class="icon-bubble">👨‍👩‍👧</div><h3>Community Favorite</h3><p>Proudly serving local families and celebrations.</p></div>
-      <div class="why-card"><div class="icon-bubble">🏆</div><h3>Made With Love</h3><p>Every loaf, pastry, and cake receives personal attention.</p></div>
+      <div class="why-card">
+        <div class="icon-bubble">❤️</div>
+        <h3>Friendly Service</h3>
+        <p>Welcoming staff committed to making every visit special.</p>
+      </div>
     </div>
+
+    <!-- IMAGE CAROUSEL -->
+    <div class="carousel-container">
+
+      <button class="carousel-btn prev">&#10094;</button>
+
+      <div class="carousel">
+        <img src="assets/bread.jpg" alt="Photo 1">
+        <img src="assets/bun.jpg" alt="Photo 2">
+        <img src="assets/bunch.jpg" alt="Photo 3">
+        <img src="assets/buns.jpg" alt="Photo 4">
+        <img src="assets/cakes (1).jpg" alt="Photo 5">
+        <img src="assets/donut.jpg" alt="Photo 6">
+        <img src="assets/dough.jpg" alt="Photo 7">
+        <img src="assets/long.jpg" alt="Photo 8">
+        <img src="assets/milkjello.jpg" alt="Photo 9">
+        <img src="assets/more.jpg" alt="Photo 10">
+        <img src="assets/overlook2.jpg" alt="Photo 11">
+        <img src="assets/overlook3.jpg" alt="Photo 12">
+        <img src="assets/overlook4.jpg" alt="Photo 13">
+        <img src="assets/puff.jpg" alt="Photo 14">
+        <img src="assets/strudel.jpg" alt="Photo 15">
+        <img src="assets/variety.jpg" alt="Photo 16">
+      </div>
+
+      <button class="carousel-btn next">&#10095;</button>
+
+    </div>
+
+    <!-- BOTTOM 3 CARDS -->
+    <div class="why-grid" style="margin-top: 3rem;">
+      <div class="why-card">
+        <div class="icon-bubble">🌾</div>
+        <h3>Quality Ingredients</h3>
+        <p>Only carefully selected ingredients go into every recipe.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon-bubble">👨‍👩‍👧</div>
+        <h3>Community Favorite</h3>
+        <p>Proudly serving local families and celebrations.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon-bubble">🏆</div>
+        <h3>Made With Love</h3>
+        <p>Every loaf, pastry, and cake receives personal attention.</p>
+      </div>
+    </div>
+
   </div>
 </section>
+    
+
 
 <section id="story">
   <div class="container story">
@@ -744,5 +744,47 @@ showSlide();
   <script>document.getelementById('y').textContent=new Date().getFullYear()</script>
 </footer>
 
+ <script>
+const carousel = document.querySelector('.carousel');
+const slides = document.querySelectorAll('.carousel img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+const visibleSlides = 3;
+
+function showSlide() {
+    const slideWidth = slides[0].offsetWidth;
+    carousel.style.transform =
+        `translateX(-${index * slideWidth}px)`;
+}
+
+function nextSlide() {
+    if (index >= slides.length - visibleSlides) {
+        index = 0;
+    } else {
+        index++;
+    }
+    showSlide();
+}
+
+function prevSlide() {
+    if (index <= 0) {
+        index = slides.length - visibleSlides;
+    } else {
+        index--;
+    }
+    showSlide();
+}
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+setInterval(nextSlide, 3000);
+
+window.addEventListener('resize', showSlide);
+
+showSlide();
+</script>
 </body>
 </html>

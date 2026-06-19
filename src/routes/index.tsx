@@ -5,13 +5,13 @@ import {
   Cake, Cookie, Croissant, Star, ChefHat, Award, Send, Facebook, Instagram,
 } from "lucide-react";
 import { useState } from "react";
-import hero from "@/assets/hero.jpg";
-import bread from "@/assets/bread.jpg";
-import cake from "@/assets/cake.jpg";
-import pastries from "@/assets/pastries.jpg";
-import cookies from "@/assets/cookies.jpg";
-import mexican from "@/assets/mexican.jpg";
-import seasonal from "@/assets/seasonal.jpg";
+import hero from "@/assets/variety.jpg";
+import bread from "@/assets/crossant.jpg";
+import cake from "@/assets/cakes.jpg";
+import pastries from "@/assets/layered.jpg";
+import cookies from "@/assets/cookie.jpg";
+import mexican from "@/assets/concha.jpg";
+import seasonal from "@/assets/flan.jpg";
 import about from "@/assets/about.jpg";
 
 export const Route = createFileRoute("/")({

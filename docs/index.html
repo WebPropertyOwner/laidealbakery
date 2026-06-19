@@ -1,171 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>La Ideal 2 — Bakery</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>La Ideal 2 Bakery</title>
 
-  <!-- You can link Tailwind or your CSS here -->
-  <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Nunito:wght@400;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#fff7f0;
+  --card:#ffffff;
+  --text:#2b1d16;
+  --muted:#7a5b4c;
+  --primary:#c55a2e;
+  --soft:#f3e2d6;
+  --radius:20px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family: "Nunito", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 6%;
+  position:sticky;
+  top:0;
+  background:rgba(255,247,240,0.9);
+  backdrop-filter:blur(10px);
+}
+.logo{
+  font-weight:700;
+  font-family:"Fraunces";
+}
+.nav-links a{
+  margin:0 12px;
+  text-decoration:none;
+  color:var(--muted);
+}
+.btn{
+  background:var(--primary);
+  color:white;
+  padding:10px 16px;
+  border-radius:999px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  padding:70px 6%;
+  align-items:center;
+}
+.hero h1{
+  font-family:"Fraunces";
+  font-size:48px;
+  line-height:1.1;
+}
+.hero h1 span{color:var(--primary)}
+.hero p{margin:16px 0;color:var(--muted)}
+.hero img{
+  width:100%;
+  border-radius:24px;
+}
+
+/* BUTTONS */
+.actions{
+  display:flex;
+  gap:12px;
+  margin-top:20px;
+}
+.btn-outline{
+  border:2px solid var(--primary);
+  padding:10px 16px;
+  border-radius:999px;
+  text-decoration:none;
+  color:var(--primary);
+}
+
+/* FEATURES */
+.section{
+  padding:60px 6%;
+}
+.title{
+  text-align:center;
+  margin-bottom:40px;
+}
+.title h2{
+  font-family:"Fraunces";
+  font-size:36px;
+}
+.title p{color:var(--muted)}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-6px)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-body{padding:16px}
+.card-body h3{font-family:"Fraunces"}
+.card-body p{color:var(--muted);font-size:14px;margin-top:6px}
+
+/* FEATURE STRIP (like screenshot icons row) */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+.feature{
+  background:white;
+  padding:20px;
+  border-radius:18px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+.icon{
+  width:40px;height:40px;
+  border-radius:12px;
+  background:var(--soft);
+  display:grid;
+  place-items:center;
+  font-size:18px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<header class="nav">
-  <div class="nav-inner">
-    <a class="logo" href="#top">
-      <span class="logo-icon">🥖</span>
-      <div>
-        <strong>La Ideal 2</strong>
-        <small>Panaderia · Pasteleria</small>
-      </div>
-    </a>
-
-    <nav class="nav-links">
-      <a href="#products">Menu</a>
-      <a href="#about">About</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Visit</a>
-    </nav>
-
-    <a class="call-btn" href="tel:+10000000000">📞 Call Now</a>
+<nav>
+  <div class="logo">La Ideal 2</div>
+  <div class="nav-links">
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#visit">Visit</a>
   </div>
-</header>
+  <a class="btn" href="tel:+12066517514">Call Now</a>
+</nav>
 
 <!-- HERO -->
-<section id="top" class="hero">
-  <div class="hero-left">
-    <p class="script">Freshly baked every day</p>
-    <h1>
-      Warm bread,<br>
-      <span>sweet moments</span>,<br>
-      baked with love.
-    </h1>
+<section class="hero">
+  <div>
+    <h1>Warm bread, <span>sweet moments</span>, baked with love.</h1>
+    <p>Fresh pastries, cakes, cookies, and traditional Mexican baked goods made daily.</p>
 
-    <p>
-      Discover delicious breads, pastries, cakes, cookies, and traditional baked goods made fresh daily.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">Visit Our Bakery →</a>
-      <a href="tel:+10000000000" class="btn-outline">Call Now</a>
+    <div class="actions">
+      <a class="btn" href="#menu">Visit Bakery</a>
+      <a class="btn-outline" href="tel:+12066517514">Call Now</a>
     </div>
   </div>
 
-  <div class="hero-right">
-    <img src="hero.jpg" alt="Bakery">
-  </div>
+  <img src="assets/hero.jpg" alt="bakery">
 </section>
 
-<!-- PRODUCTS -->
-<section id="products" class="section">
-  <h2>Our Favorites</h2>
+<!-- FEATURES (like your screenshot cards row) -->
+<section class="section">
+  <div class="title">
+    <h2>Our freshly baked favorites</h2>
+    <p>Pulled warm from the oven and made for sharing.</p>
+  </div>
 
   <div class="grid">
     <div class="card">
-      <img src="bread.jpg">
-      <h3>Fresh Bread</h3>
-      <p>Crusty sourdough and soft loaves.</p>
+      <img src="assets/bread.jpg">
+      <div class="card-body">
+        <h3>Fresh Bread</h3>
+        <p>Crusty sourdough and soft rolls baked daily.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="cake.jpg">
-      <h3>Cakes</h3>
-      <p>Custom cakes for every occasion.</p>
+      <img src="assets/cake.jpg">
+      <div class="card-body">
+        <h3>Cakes</h3>
+        <p>Custom cakes for birthdays and celebrations.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="pastries.jpg">
-      <h3>Pastries</h3>
-      <p>Flaky, buttery, freshly baked.</p>
-    </div>
-
-    <div class="card">
-      <img src="cookies.jpg">
-      <h3>Cookies</h3>
-      <p>Soft and chewy classics.</p>
-    </div>
-
-    <div class="card">
-      <img src="pandulce.jpg">
-      <h3>Pan Dulce</h3>
-      <p>Traditional Mexican favorites.</p>
-    </div>
-
-    <div class="card">
-      <img src="seasonal.jpg">
-      <h3>Seasonal</h3>
-      <p>Holiday specials & limited items.</p>
+      <img src="assets/pastry.jpg">
+      <div class="card-body">
+        <h3>Pastries</h3>
+        <p>Flaky croissants, conchas, and sweet bread.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- WHY US -->
-<section class="why-us">
-  <h2>Why Choose Us</h2>
+<!-- FEATURES STRIP -->
+<section class="section">
+  <div class="features">
 
-  <div class="grid-3">
+    <div class="feature">
+      <div class="icon">🥐</div>
+      <div>
+        <strong>Fresh Daily</strong>
+        <p style="color:#7a5b4c;font-size:14px">Baked every morning.</p>
+      </div>
+    </div>
 
-    <div class="why-card">🥖 <h3>Fresh Daily</h3><p>Baked every morning.</p></div>
-    <div class="why-card">👨‍🍳 <h3>Authentic Recipes</h3><p>Traditional methods.</p></div>
-    <div class="why-card">🤝 <h3>Friendly Service</h3><p>We care about you.</p></div>
+    <div class="feature">
+      <div class="icon">❤️</div>
+      <div>
+        <strong>Authentic Recipes</strong>
+        <p style="color:#7a5b4c;font-size:14px">Traditional family baking.</p>
+      </div>
+    </div>
 
-    <div class="why-card">🌾 <h3>Quality Ingredients</h3><p>Only the best.</p></div>
-    <div class="why-card">🏡 <h3>Community Favorite</h3><p>Loved locally.</p></div>
-    <div class="why-card">💛 <h3>Made With Love</h3><p>Every item crafted carefully.</p></div>
+    <div class="feature">
+      <div class="icon">👨‍🍳</div>
+      <div>
+        <strong>Made With Care</strong>
+        <p style="color:#7a5b4c;font-size:14px">Every item handcrafted.</p>
+      </div>
+    </div>
 
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="about-img">
-    <img src="about.jpg">
-  </div>
-
-  <div class="about-text">
-    <h2>Our Story</h2>
-    <p>
-      Family-owned bakery dedicated to fresh baked goods and tradition.
-    </p>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="reviews">
-  <h2>What Customers Say</h2>
-
-  <div class="grid">
-    <div class="review">"Amazing pastries!" — Maria</div>
-    <div class="review">"Best bakery in town!" — Daniel</div>
-    <div class="review">"Tastes like home." — Lupita</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Visit Us</h2>
-
-  <div class="contact-grid">
-    <div>📍 123 Bakery Lane</div>
-    <div>📞 (000) 000-0000</div>
-    <div>✉️ hello@laideal2.com</div>
-    <div>🕒 6AM - 8PM</div>
-  </div>
-
-  <form>
-    <input placeholder="Name">
-    <input placeholder="Email">
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <p>© La Ideal 2 Bakery</p>
+  © <span id="year"></span> La Ideal 2 Bakery
 </footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

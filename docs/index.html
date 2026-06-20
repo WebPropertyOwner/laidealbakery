@@ -1,561 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Pasteleria Y Panaderia La Ideal 2 — Freshly Baked Every Day</title>
-
-  <meta
-    name="description"
-    content="Authentic neighborhood bakery: fresh breads, pastries, cakes, cookies, and traditional Mexican baked goods made daily with love."
-  />
-
-  <meta property="og:title" content="Pas2066517514eria Y Panaderia La Ideal 2" />
-  <meta
-    property="og:description"
-    content="Freshly baked breads, pastries, and cakes made daily with quality ingredients and generations of tradition."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/wine.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Nunito:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    :root {
-      --cream: #fdf6ec;
-      --cream-2: #f7ead4;
-      --rose: #c96b6b;
-      --rose-dark: #a14848;
-      --caramel: #b07a3b;
-      --caramel-dark: #8a5c25;
-      --chocolate: #3b2418;
-      --ink: #2a1a12;
-      --muted: #7a5f4f;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Nunito", system-ui, sans-serif;
-      color: var(--ink);
-      background: var(--cream);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Fraunces", Georgia, serif;
-      font-weight: 600;
-      line-height: 1.15;
-      color: var(--chocolate);
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-    }
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 0.5rem;
-    }
-
-    h3 {
-      font-size: 1.35rem;
-    }
-
-    .script {
-      font-family: "Caveat", cursive;
-      color: var(--rose);
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* NAV */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(253, 246, 236, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(176, 122, 59, 0.15);
-    }
-
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.5rem;
-    }
-
-    .brand {
-      font-family: "Fraunces", serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--chocolate);
-    }
-
-    .brand span {
-      color: var(--rose);
-    }
-
-    .nav-links {
-      display: none;
-      gap: 2rem;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      color: var(--rose);
-    }
-
-    @media (min-width: 768px) {
-      .nav-links {
-        display: flex;
-      }
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--rose);
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      box-shadow: 0 6px 20px rgba(201, 107, 107, 0.25);
-    }
-
-    .btn:hover {
-      background: var(--rose-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(201, 107, 107, 0.35);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--chocolate);
-      border: 2px solid var(--caramel);
-      box-shadow: none;
-    }
-
-    .btn-outline:hover {
-      background: var(--caramel);
-      color: #fff;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(253, 246, 236, 0.85),
-          rgba(247, 234, 212, 0.7)
-        ),
-        url("assets/hero.jpg") center/cover no-repeat;
-      padding: 6rem 1.5rem;
-      overflow: hidden;
-    }
-
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .hero-content {
-      max-width: 680px;
-    }
-
-    .hero h1 {
-      margin: 1rem 0 1.5rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--muted);
-      margin-bottom: 2rem;
-      max-width: 540px;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .float {
-      position: absolute;
-      opacity: 0.6;
-      font-size: 3rem;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    .float.f1 {
-      top: 12%;
-      right: 8%;
-      animation-delay: 0s;
-    }
-
-    .float.f2 {
-      bottom: 18%;
-      right: 18%;
-      animation-delay: 2s;
-    }
-
-    .float.f3 {
-      top: 30%;
-      right: 30%;
-      animation-delay: 4s;
-      display: none;
-    }
-
-    @media (min-width: 900px) {
-      .float.f3 {
-        display: block;
-      }
-    }
-
-    @keyframes float {
-      0%,
-      100% {
-        transform: translateY(0) rotate(-5deg);
-      }
-
-      50% {
-        transform: translateY(-20px) rotate(5deg);
-      }
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 5rem 1.5rem;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-head {
-      text-align: center;
-      margin-bottom: 3.5rem;
-    }
-
-    .section-head .script {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      max-width: 640px;
-      margin: 1rem auto 0;
-      font-size: 1.05rem;
-    }
-
-    /* PRODUCTS */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(59, 36, 24, 0.06);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(59, 36, 24, 0.12);
-    }
-
-    .card-img {
-      height: 240px;
-      overflow: hidden;
-    }
-
-    .card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-
-    .card:hover .card-img img {
-      transform: scale(1.08);
-    }
-
-    .card-body {
-      padding: 1.5rem;
-    }
-
-    .card-body h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .card-body p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* WHY */
-    .why {
-      background: linear-gradient(
-        180deg,
-        var(--cream) 0%,
-        var(--cream-2) 100%
-      );
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-
-    .why-card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 4px 16px rgba(59, 36, 24, 0.05);
-    }
-
-    .icon-bubble {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--rose), var(--caramel));
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-      color: #fff;
-    }
-
-    /* STORY */
-    .story {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    @media (min-width: 900px) {
-      .story {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .story img {
-      border-radius: 24px;
-      box-shadow: 0 20px 40px rgba(59, 36, 24, 0.15);
-    }
-
-    .story p {
-      color: var(--muted);
-      margin-top: 1.5rem;
-      font-size: 1.05rem;
-    }
-
-    /* MENU */
-    .menu {
-      background: var(--cream-2);
-    }
-
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .menu-item {
-      background: #fff;
-      padding: 1.25rem 1.5rem;
-      border-radius: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-left: 4px solid var(--caramel);
-    }
-
-    .menu-item .price {
-      color: var(--rose);
-      font-weight: 700;
-    }
-
-    /* TESTIMONIALS */
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .testi {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 4px 16px rgba(59, 36, 24, 0.05);
-    }
-
-    .stars {
-      color: #e6b653;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
-    }
-
-    .testi-quote {
-      font-style: italic;
-      color: var(--ink);
-      margin-bottom: 1rem;
-      font-size: 1.05rem;
-    }
-
-    .testi-name {
-      font-weight: 700;
-      color: var(--caramel-dark);
-    }
-
-    /* VISIT */
-    .visit {
-      background: var(--chocolate);
-      color: #f7ead4;
-    }
-
-    .visit h2 {
-      color: #fff;
-    }
-
-    .visit .script {
-      color: #f3b9b9;
-    }
-
-    .visit-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    @media (min-width: 768px) {
-      .visit-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .info-card {
-      background: rgba(255, 255, 255, 0.06);
-      padding: 2rem;
-      border-radius: 20px;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .info-card .icon-bubble {
-      background: linear-gradient(135deg, #f3b9b9, #e6b653);
-    }
-
-    .info-card h3 {
-      color: #fff;
-      margin-bottom: 0.75rem;
-    }
-
-    .info-card p {
-      color: #e8d5b8;
-      font-size: 0.95rem;
-    }
-
-    .call-cta {
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .call-cta .btn {
-      font-size: 1.1rem;
-      padding: 1rem 2.25rem;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #1f120a;
-      color: #c9b39a;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    footer .brand {
-      color: #fff;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .icon {
-      width: 1.4em;
-      height: 1.4em;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pasteleria Y Panaderia La Ideal 2 — Fresh Mexican Bakery in Kent, WA</title>
+<meta name="description" content="Authentic Mexican bakery in Kent, WA. Fresh conchas, pan dulce, cakes, cookies, flan, and coffee — baked daily. Panadería mexicana auténtica." />
+<meta property="og:title" content="Pasteleria Y Panaderia La Ideal 2" />
+<meta property="og:description" content="Freshly baked Mexican breads, pastries, and cakes in Kent, WA. Pan recién horneado todos los días." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/variety.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--cream:#fdf6ec;--cream-2:#f7ead4;--rose:#c96b6b;--rose-dark:#a14848;--caramel:#b07a3b;--caramel-dark:#8a5c25;--chocolate:#3b2418;--ink:#2a1a12;--muted:#7a5f4f;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Nunito",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.15;color:var(--chocolate)}
+  h1{font-size:clamp(2.5rem,6vw,4.5rem)}
+  h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:.5rem}
+  h3{font-size:1.35rem}
+  .script{font-family:"Caveat",cursive;color:var(--rose);font-size:1.6rem;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(253,246,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(176,122,59,.15)}
+  .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;gap:1rem}
+  .brand{font-family:"Fraunces",serif;font-weight:700;font-size:1.25rem;color:var(--chocolate)}
+  .brand span{color:var(--rose)}
+  .nav-links{display:none;gap:2rem;font-weight:600;font-size:.95rem}
+  .nav-links a:hover{color:var(--rose)}
+  @media (min-width:768px){.nav-links{display:flex}}
+  .nav-right{display:flex;align-items:center;gap:.75rem}
+  .lang-toggle{display:inline-flex;background:#fff;border:1px solid rgba(176,122,59,.3);border-radius:999px;padding:3px;font-size:.8rem;font-weight:700}
+  .lang-toggle button{border:none;background:transparent;padding:.35rem .7rem;border-radius:999px;cursor:pointer;color:var(--muted);font-weight:700}
+  .lang-toggle button.active{background:var(--rose);color:#fff}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--rose);color:#fff;padding:.75rem 1.5rem;border-radius:999px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .25s;box-shadow:0 6px 20px rgba(201,107,107,.25)}
+  .btn:hover{background:var(--rose-dark);transform:translateY(-2px);box-shadow:0 10px 28px rgba(201,107,107,.35)}
+  .btn-outline{background:transparent;color:var(--chocolate);border:2px solid var(--caramel);box-shadow:none}
+  .btn-outline:hover{background:var(--caramel);color:#fff}
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;background:linear-gradient(135deg,rgba(253,246,236,.85),rgba(247,234,212,.7)),url("assets/variety.jpg") center/cover no-repeat;padding:6rem 1.5rem;overflow:hidden}
+  .hero-inner{max-width:1200px;margin:0 auto;width:100%}
+  .hero-content{max-width:680px}
+  .hero h1{margin:1rem 0 1.5rem}
+  .hero p{font-size:1.2rem;color:var(--muted);margin-bottom:2rem;max-width:540px}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+  .float{position:absolute;opacity:.6;font-size:3rem;animation:float 6s ease-in-out infinite}
+  .float.f1{top:12%;right:8%}
+  .float.f2{bottom:18%;right:18%;animation-delay:2s}
+  .float.f3{top:30%;right:30%;animation-delay:4s;display:none}
+  @media (min-width:900px){.float.f3{display:block}}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-20px) rotate(5deg)}}
+  section{padding:5rem 1.5rem}
+  .container{max-width:1200px;margin:0 auto}
+  .section-head{text-align:center;margin-bottom:3.5rem}
+  .section-head .script{display:block;margin-bottom:.5rem}
+  .section-head p{color:var(--muted);max-width:640px;margin:1rem auto 0;font-size:1.05rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+  .card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 20px rgba(59,36,24,.06);transition:transform .35s,box-shadow .35s}
+  .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(59,36,24,.12)}
+  .card-img{height:240px;overflow:hidden}
+  .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .card:hover .card-img img{transform:scale(1.08)}
+  .card-body{padding:1.5rem}
+  .card-body h3{margin-bottom:.5rem}
+  .card-body p{color:var(--muted);font-size:.95rem}
+  .why{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%)}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:1rem}
+  .why-card{background:#fff;padding:2rem;border-radius:20px;text-align:center;box-shadow:0 4px 16px rgba(59,36,24,.05)}
+  .icon-bubble{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--caramel));display:inline-flex;align-items:center;justify-content:center;font-size:1.75rem;margin-bottom:1rem;color:#fff}
+  .story{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
+  @media (min-width:900px){.story{grid-template-columns:1fr 1fr}}
+  .story img{border-radius:24px;box-shadow:0 20px 40px rgba(59,36,24,.15)}
+  .story p{color:var(--muted);margin-top:1.5rem;font-size:1.05rem}
+  .menu{background:var(--cream-2)}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;max-width:800px;margin:0 auto}
+  .menu-item{background:#fff;padding:1.25rem 1.5rem;border-radius:14px;display:flex;justify-content:space-between;align-items:center;border-left:4px solid var(--caramel);gap:1rem}
+  .menu-item .price{color:var(--rose);font-weight:700;white-space:nowrap}
+  .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+  .testi{background:#fff;padding:2rem;border-radius:20px;box-shadow:0 4px 16px rgba(59,36,24,.05)}
+  .stars{color:#e6b653;margin-bottom:1rem;letter-spacing:2px}
+  .testi-quote{font-style:italic;color:var(--ink);margin-bottom:1rem;font-size:1.05rem}
+  .testi-name{font-weight:700;color:var(--caramel-dark)}
+  .visit{background:var(--chocolate);color:#f7ead4}
+  .visit h2{color:#fff}
+  .visit .script{color:#f3b9b9}
+  .visit-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:3rem}
+  @media (min-width:768px){.visit-grid{grid-template-columns:repeat(3,1fr)}}
+  .info-card{background:rgba(255,255,255,.06);padding:2rem;border-radius:20px;text-align:center;border:1px solid rgba(255,255,255,.1)}
+  .info-card .icon-bubble{background:linear-gradient(135deg,#f3b9b9,#e6b653)}
+  .info-card h3{color:#fff;margin-bottom:.75rem}
+  .info-card p{color:#e8d5b8;font-size:.95rem}
+  .call-cta{text-align:center;margin-top:3rem}
+  .call-cta .btn{font-size:1.1rem;padding:1rem 2.25rem}
+  .gallery{background:var(--cream)}
+  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem;margin-top:2rem}
+  .gallery-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;transition:transform .4s}
+  .gallery-grid img:hover{transform:scale(1.03)}
+  footer{background:#1f120a;color:#c9b39a;padding:2.5rem 1.5rem;text-align:center;font-size:.9rem}
+  footer .brand{color:#fff;display:block;margin-bottom:.5rem}
+  [data-i18n-es]{display:none}
+  html[lang="es"] [data-i18n-en]{display:none}
+  html[lang="es"] [data-i18n-es]{display:inline}
+  html[lang="es"] [data-i18n-es].block{display:block}
+</style>
 </head>
-
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
     <div class="brand">La Ideal <span>2</span></div>
     <div class="nav-links">
-      <a href="#products">Products</a>
-      <a href="#story">Our Story</a>
-      <a href="#menu">Menu</a>
-      <a href="#visit">Visit Us</a>
+      <a href="#products"><span data-i18n-en>Products</span><span data-i18n-es>Productos</span></a>
+      <a href="#story"><span data-i18n-en>Our Story</span><span data-i18n-es>Nuestra Historia</span></a>
+      <a href="#menu"><span data-i18n-en>Menu</span><span data-i18n-es>Menú</span></a>
+      <a href="#visit"><span data-i18n-en>Visit</span><span data-i18n-es>Visítanos</span></a>
     </div>
-    <a href="2066517514:+10000000000" class="btn">Call Now</a>
+    <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
+      <a href="tel:+12066517514" class="btn"><span data-i18n-en>Call</span><span data-i18n-es>Llamar</span></a>
+    </div>
   </div>
 </nav>
 
@@ -565,12 +132,21 @@
   <span class="float f3">🧁</span>
   <div class="hero-inner">
     <div class="hero-content">
-      <span class="script">Freshly baked every morning</span>
-      <h1>Tradition you can taste, baked with love.</h1>
-      <p>Authentic breads, cakes, cookies, and traditional Mexican pastries — handmade daily in your neighborhood since day one.</p>
+      <span class="script">
+        <span data-i18n-en>Freshly baked every morning</span>
+        <span data-i18n-es>Recién horneado cada mañana</span>
+      </span>
+      <h1>
+        <span data-i18n-en>Tradition you can taste, baked with love.</span>
+        <span data-i18n-es>Tradición que puedes saborear, horneada con amor.</span>
+      </h1>
+      <p>
+        <span data-i18n-en>Authentic Mexican breads, cakes, cookies, and pastries — handmade daily in Kent, WA.</span>
+        <span data-i18n-es>Pan mexicano auténtico, pasteles, galletas y pan dulce — hecho a mano todos los días en Kent, WA.</span>
+      </p>
       <div class="hero-cta">
-        <a href="2066517514:+2066517514" class="btn">📞 Call to Order</a>
-        <a href="#products" class="btn btn-outline">View Our Treats</a>
+        <a href="tel:+12066517514" class="btn">📞 <span data-i18n-en>Call to Order</span><span data-i18n-es>Llama para Ordenar</span></a>
+        <a href="#products" class="btn btn-outline"><span data-i18n-en>View Our Treats</span><span data-i18n-es>Ver Productos</span></a>
       </div>
     </div>
   </div>
@@ -579,74 +155,91 @@
 <section id="products">
   <div class="container">
     <div class="section-head">
-      <span class="script">Our specialties</span>
-      <h2>Made fresh, every single day</h2>
-      <p>From crusty artisan loaves to celebration cakes, every item is crafted in-house with care.</p>
+      <span class="script"><span data-i18n-en>Our specialties</span><span data-i18n-es>Nuestras especialidades</span></span>
+      <h2><span data-i18n-en>Made fresh, every single day</span><span data-i18n-es>Hecho fresco, todos los días</span></h2>
+      <p>
+        <span data-i18n-en>From crusty artisan loaves to celebration cakes, every item is crafted in-house with care.</span>
+        <span data-i18n-es>Desde pan artesanal hasta pasteles de celebración, todo se elabora en casa con cariño.</span>
+      </p>
     </div>
     <div class="grid">
-      <article class="card"><div class="card-img"><img src="assets/cakes.jpg" alt="Custom celebration cakes" /></div><div class="card-body"><h3>Cakes &amp; Custom Cakes</h3><p>Celebration cakes hand-decorated for birthdays, graducations, and everyday joy.</p></div></article>
-      <article class="card"><div class="card-img"><img src="assets/variety.jpg" alt="Sweet pastries" /></div><div class="card-body"><h3>Sweet Pastries</h3><p>Diverse, buttery, flaky, golden — layered cake, churros, and croissants straight from the oven.</p></div></article>
-      <article class="card"><div class="card-img"><img src="assets/concha.jpg" alt="Fresh conchas" /></div><div class="card-body"><h3>Conchas</h3><p>The Classic Soft and fluffy — the kind of concha you remember.</p></div></article>
-      <article class="card"><div class="card-img"><img src="assets/flan.jpg" alt="Traditional Mexican bread" /></div><div class="card-body"><h3>Traditional Mexican Flan</h3><p>Creamy Caramel Custard — made the way abuela taught us.</p></div></article>
-      <article class="card"><div class="card-img"><img src="assets/jello.jpg" alt="Jello Cups" /></div><div class="card-body"><h3>Specials</h3><p>Variety of Jello —  milk jellos variety shapes.</p></div></article>
-      <article class="card"><div class="card-img"><img src="assets/cookie.jpg" alt="Cookies" /></div><div class="card-body"><h3>Cookies</h3><p>Variety of Cookies —  all sorted cookies.</p></div></article>
+      <article class="card"><div class="card-img"><img src="assets/cakes.jpg" alt="Custom celebration cakes" /></div><div class="card-body">
+        <h3><span data-i18n-en>Cakes &amp; Custom Cakes</span><span data-i18n-es>Pasteles y Pasteles a la Medida</span></h3>
+        <p><span data-i18n-en>Hand-decorated cakes for birthdays, graduations, and every celebration.</span><span data-i18n-es>Pasteles decorados a mano para cumpleaños, graduaciones y toda celebración.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/layered.jpg" alt="Sweet pastries" /></div><div class="card-body">
+        <h3><span data-i18n-en>Sweet Pastries</span><span data-i18n-es>Pan Dulce</span></h3>
+        <p><span data-i18n-en>Buttery, flaky, golden — layered cake, churros, and croissants straight from the oven.</span><span data-i18n-es>Mantecoso y hojaldrado — pastel en capas, churros y cuernitos recién salidos del horno.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/concha.jpg" alt="Fresh conchas" /></div><div class="card-body">
+        <h3><span data-i18n-en>Conchas</span><span data-i18n-es>Conchas</span></h3>
+        <p><span data-i18n-en>Soft, fluffy, classic — the kind of concha you remember from home.</span><span data-i18n-es>Suaves, esponjosas, clásicas — las conchas que recuerdas de casa.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/flan.jpg" alt="Traditional flan" /></div><div class="card-body">
+        <h3><span data-i18n-en>Traditional Flan</span><span data-i18n-es>Flan Tradicional</span></h3>
+        <p><span data-i18n-en>Creamy caramel custard — made the way abuela taught us.</span><span data-i18n-es>Cremoso flan de caramelo — hecho como nos enseñó la abuela.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/jello.jpg" alt="Jello cups" /></div><div class="card-body">
+        <h3><span data-i18n-en>Gelatins &amp; Specials</span><span data-i18n-es>Gelatinas y Especiales</span></h3>
+        <p><span data-i18n-en>Milk gelatins in a variety of shapes and flavors.</span><span data-i18n-es>Gelatinas de leche en variedad de formas y sabores.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/cookie.jpg" alt="Cookies" /></div><div class="card-body">
+        <h3><span data-i18n-en>Cookies</span><span data-i18n-es>Galletas</span></h3>
+        <p><span data-i18n-en>A wide assortment of fresh-baked cookies, every day.</span><span data-i18n-es>Gran variedad de galletas recién horneadas, todos los días.</span></p>
+      </div></article>
     </div>
   </div>
 </section>
-<section class="why-us">
-    <span class="script">Why Choose Us</span>
 
-    <h2>Quality Baking, Exceptional Service</h2>
-
-    <p>From freshly baked breads to custom cakes, we are committed to delivering quality products and memorable experiences every day.</p>
-
-    <div class="why-grid">
-
-        <div class="why-card">
-            <div class="icon-bubble">🥖</div>
-            <h3>Freshly Baked Every Day</h3>
-            <p>Our breads, pastries, and cakes are prepared daily to ensure exceptional freshness, flavor, and quality.</p>
-        </div>
-
-        <div class="why-card">
-            <div class="icon-bubble">👨‍🍳</div>
-            <h3>Traditional Baking Excellence</h3>
-            <p>We combine time-honored recipes with skilled craftsmanship to deliver authentic baked goods for every occasion.</p>
-        </div>
-
-        <div class="why-card">
-            <div class="icon-bubble">🤝</div>
-            <h3>Exceptional Customer Service</h3>
-            <p>Our team is dedicated to providing a warm, welcoming experience and personalized attention to every customer.</p>
-        </div>
-        <div class="why-card">
-            <div class="icon-bubble">🌾</div>
-            <h3>Premium Ingredients</h3>
-            <p>We carefully select high-quality ingredients to ensure consistent taste, texture, and freshness in every product.</p>
-        </div>
-
-        <div class="why-card">
-            <div class="icon-bubble">🏡</div>
-            <h3>Trusted by the Community</h3>
-            <p>Proudly serving local families, celebrations, and special events with products they know and love.</p>
-        </div>
-
-        <div class="why-card">
-            <div class="icon-bubble">💛</div>
-            <h3>Crafted with Care</h3>
-            <p>Every loaf, pastry, and dessert is made with attention to detail and a commitment to excellence.</p>
-        </div>
+<section class="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="script"><span data-i18n-en>Why choose us</span><span data-i18n-es>Por qué elegirnos</span></span>
+      <h2><span data-i18n-en>Quality baking, exceptional service</span><span data-i18n-es>Calidad y servicio excepcional</span></h2>
     </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="icon-bubble">🥖</div>
+        <h3><span data-i18n-en>Baked Daily</span><span data-i18n-es>Horneado a Diario</span></h3>
+        <p><span data-i18n-en>Breads, pastries, and cakes prepared fresh every day.</span><span data-i18n-es>Panes, pan dulce y pasteles preparados frescos cada día.</span></p>
+      </div>
+      <div class="why-card"><div class="icon-bubble">👨‍🍳</div>
+        <h3><span data-i18n-en>Traditional Recipes</span><span data-i18n-es>Recetas Tradicionales</span></h3>
+        <p><span data-i18n-en>Time-honored recipes crafted with skill and authenticity.</span><span data-i18n-es>Recetas de toda la vida elaboradas con maestría y autenticidad.</span></p>
+      </div>
+      <div class="why-card"><div class="icon-bubble">🤝</div>
+        <h3><span data-i18n-en>Warm Service</span><span data-i18n-es>Servicio Cálido</span></h3>
+        <p><span data-i18n-en>A welcoming team that treats every customer like family.</span><span data-i18n-es>Un equipo acogedor que trata a cada cliente como familia.</span></p>
+      </div>
+      <div class="why-card"><div class="icon-bubble">🌾</div>
+        <h3><span data-i18n-en>Premium Ingredients</span><span data-i18n-es>Ingredientes Premium</span></h3>
+        <p><span data-i18n-en>Carefully selected ingredients for consistent flavor and freshness.</span><span data-i18n-es>Ingredientes cuidadosamente seleccionados para sabor y frescura.</span></p>
+      </div>
+      <div class="why-card"><div class="icon-bubble">🏡</div>
+        <h3><span data-i18n-en>Community Favorite</span><span data-i18n-es>Favorito del Vecindario</span></h3>
+        <p><span data-i18n-en>Proudly serving Kent families and celebrations for years.</span><span data-i18n-es>Sirviendo con orgullo a las familias de Kent por años.</span></p>
+      </div>
+      <div class="why-card"><div class="icon-bubble">💛</div>
+        <h3><span data-i18n-en>Crafted with Care</span><span data-i18n-es>Hecho con Cariño</span></h3>
+        <p><span data-i18n-en>Every loaf and dessert reflects attention to detail.</span><span data-i18n-es>Cada pan y postre refleja atención al detalle.</span></p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="story">
   <div class="container story">
     <img src="assets/zoom.jpg" alt="Inside our bakery" />
     <div>
-      <span class="script">Our story</span>
-      <h2>Generations of baking, one neighborhood at a time.</h2>
-      <p>At Pasteleria Y Panaderia La Ideal 2, baking isn't just a craft — it's a family tradition. Every recipe carries the warmth of home kitchens, the patience of early mornings, and the love of feeding the people you care about.</p>
-      <p>We knead, shape, and bake everything by hand. When you walk in, you'll smell it before you see it — fresh bread, melted butter, and a little bit of childhood.</p>
+      <span class="script"><span data-i18n-en>Our story</span><span data-i18n-es>Nuestra historia</span></span>
+      <h2><span data-i18n-en>Generations of baking, one neighborhood at a time.</span><span data-i18n-es>Generaciones horneando, un vecindario a la vez.</span></h2>
+      <p>
+        <span data-i18n-en>At Pasteleria Y Panaderia La Ideal 2, baking isn't just a craft — it's a family tradition. Every recipe carries the warmth of home kitchens and the love of feeding the people you care about.</span>
+        <span data-i18n-es>En Pastelería y Panadería La Ideal 2, hornear no es solo un oficio — es una tradición familiar. Cada receta lleva el calor de la cocina de casa y el amor de alimentar a los tuyos.</span>
+      </p>
+      <p>
+        <span data-i18n-en>We knead, shape, and bake everything by hand. Walk in and you'll smell it before you see it — fresh bread, melted butter, and a little bit of childhood.</span>
+        <span data-i18n-es>Amasamos, formamos y horneamos todo a mano. Al entrar lo olerás antes de verlo — pan recién hecho, mantequilla derretida y un toque de infancia.</span>
+      </p>
     </div>
   </div>
 </section>
@@ -654,17 +247,39 @@
 <section id="menu" class="menu">
   <div class="container">
     <div class="section-head">
-      <span class="script">A taste of the menu</span>
-      <h2>Something delicious for every occasion</h2>
-      <p>Stop by to see the full daily selection — items rotate with the seasons.</p>
+      <span class="script"><span data-i18n-en>A taste of the menu</span><span data-i18n-es>Un vistazo al menú</span></span>
+      <h2><span data-i18n-en>Something delicious for every occasion</span><span data-i18n-es>Algo delicioso para cada ocasión</span></h2>
+      <p>
+        <span data-i18n-en>Stop by for the full daily selection — items rotate with the seasons.</span>
+        <span data-i18n-es>Visítanos para ver la selección completa del día — los productos cambian con la temporada.</span>
+      </p>
     </div>
     <div class="menu-grid">
-      <div class="menu-item"><span>Breakfast Pastries</span><span class="price">from $1.50</span></div>
-      <div class="menu-item"><span>Fresh Bread</span><span class="price">from $3.00</span></div>
-      <div class="menu-item"><span>Cookies</span><span class="price">from $0.75</span></div>
-      <div class="menu-item"><span>Cakes</span><span class="price">from $24.00</span></div>
-      <div class="menu-item"><span>Traditional Mexican Pastries</span><span class="price">from $1.25</span></div>
-      <div class="menu-item"><span>Holiday Specials</span><span class="price">seasonal</span></div>
+      <div class="menu-item"><span><span data-i18n-en>Breakfast Pastries</span><span data-i18n-es>Pan Dulce de Desayuno</span></span><span class="price">$1.50+</span></div>
+      <div class="menu-item"><span><span data-i18n-en>Fresh Bread</span><span data-i18n-es>Pan Fresco</span></span><span class="price">$3.00+</span></div>
+      <div class="menu-item"><span><span data-i18n-en>Cookies</span><span data-i18n-es>Galletas</span></span><span class="price">$0.75+</span></div>
+      <div class="menu-item"><span><span data-i18n-en>Cakes</span><span data-i18n-es>Pasteles</span></span><span class="price">$24.00+</span></div>
+      <div class="menu-item"><span><span data-i18n-en>Traditional Mexican Pastries</span><span data-i18n-es>Pan Dulce Mexicano</span></span><span class="price">$1.25+</span></div>
+      <div class="menu-item"><span><span data-i18n-en>Holiday Specials</span><span data-i18n-es>Especiales de Temporada</span></span><span class="price"><span data-i18n-en>seasonal</span><span data-i18n-es>de temporada</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <div class="section-head">
+      <span class="script"><span data-i18n-en>From our oven</span><span data-i18n-es>Desde nuestro horno</span></span>
+      <h2><span data-i18n-en>A peek at what's in store</span><span data-i18n-es>Una probadita de lo que tenemos</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <img src="assets/bread.jpg" alt="Fresh bread" loading="lazy" />
+      <img src="assets/bun.jpg" alt="Buns" loading="lazy" />
+      <img src="assets/buns.jpg" alt="Assorted buns" loading="lazy" />
+      <img src="assets/donut.jpg" alt="Donuts" loading="lazy" />
+      <img src="assets/puff.jpg" alt="Puff pastry" loading="lazy" />
+      <img src="assets/strudel.jpg" alt="Strudel" loading="lazy" />
+      <img src="assets/milkjello.jpg" alt="Milk gelatin" loading="lazy" />
+      <img src="assets/crossant.jpg" alt="Croissants" loading="lazy" />
     </div>
   </div>
 </section>
@@ -672,13 +287,31 @@
 <section>
   <div class="container">
     <div class="section-head">
-      <span class="script">Kind words</span>
-      <h2>What our customers say</h2>
+      <span class="script"><span data-i18n-en>Kind words</span><span data-i18n-es>Lo que dicen</span></span>
+      <h2><span data-i18n-en>What our customers say</span><span data-i18n-es>Lo que dicen nuestros clientes</span></h2>
     </div>
     <div class="testi-grid">
-      <div class="testi"><div class="stars">★★★★★</div><p class="testi-quote">"Bread is ALWAYS fresh and the options are endless! I always have to limit myself because I want one of everything! Very small shop so once you're in you have to make a game plan to get to every rack. Service is always quick and they make sure your fresh bread doesn't get squished."</p><div class="testi-name">— Alondra M.</div></div>
-      <div class="testi"><div class="stars">★★★★★</div><p class="testi-quote">"I've tried many Mexican bread shops in my lifetime and this is the one and only that NEVER disappoints! Their bread is always fresh the conchas are always soft and I recommend trying their bollios they're basically homemade white bread. 1000/10 so perfect for cold days. The front lady is always nice as well."</p><div class="testi-name">— Bianca G.</div></div>
-      <div class="testi"><div class="stars">★★★★★</div><p class="testi-quote">"Their bread is fresh and delicious. The cashiers are always welcoming and speedy. Its clean and well lit. If you are lucky enough to get their conchas hot out of the oven, melt in your mouth Best pan dulce and bolilllos south of seattle. They do have a sister baker in South Park!"</p><div class="testi-name">— Dalia F.</div></div>
+      <div class="testi"><div class="stars">★★★★★</div>
+        <p class="testi-quote">
+          <span data-i18n-en>"Bread is ALWAYS fresh and the options are endless! I have to limit myself because I want one of everything. Service is quick and they make sure your fresh bread doesn't get squished."</span>
+          <span data-i18n-es>"¡El pan SIEMPRE está fresco y las opciones son infinitas! Me tengo que limitar porque quiero uno de cada uno. El servicio es rápido y se aseguran de que tu pan llegue perfecto."</span>
+        </p>
+        <div class="testi-name">— Alondra M.</div>
+      </div>
+      <div class="testi"><div class="stars">★★★★★</div>
+        <p class="testi-quote">
+          <span data-i18n-en>"I've tried many Mexican bread shops and this one NEVER disappoints. The conchas are always soft and the bolillos are basically homemade white bread. 1000/10."</span>
+          <span data-i18n-es>"He probado muchas panaderías mexicanas y esta NUNCA decepciona. Las conchas siempre están suaves y los bolillos son como pan blanco casero. 1000/10."</span>
+        </p>
+        <div class="testi-name">— Bianca G.</div>
+      </div>
+      <div class="testi"><div class="stars">★★★★★</div>
+        <p class="testi-quote">
+          <span data-i18n-en>"Their bread is fresh and delicious. Cashiers are welcoming and quick. Best pan dulce and bolillos south of Seattle."</span>
+          <span data-i18n-es>"Su pan es fresco y delicioso. Las cajeras son amables y rápidas. El mejor pan dulce y bolillos al sur de Seattle."</span>
+        </p>
+        <div class="testi-name">— Dalia F.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -686,60 +319,53 @@
 <section id="visit" class="visit">
   <div class="container">
     <div class="section-head">
-      <span class="script">Come say hello</span>
-      <h2>Visit our bakery</h2>
-      <p style="color:#e8d5b8">We'd love to bake for you — stop in, or give us a call to place an order.</p>
+      <span class="script"><span data-i18n-en>Come say hello</span><span data-i18n-es>Ven a saludarnos</span></span>
+      <h2><span data-i18n-en>Visit our bakery</span><span data-i18n-es>Visita nuestra panadería</span></h2>
+      <p style="color:#e8d5b8">
+        <span data-i18n-en>We'd love to bake for you — stop in or give us a call.</span>
+        <span data-i18n-es>Nos encantaría hornear para ti — pásate o llámanos.</span>
+      </p>
     </div>
     <div class="visit-grid">
-      <div class="info-card"><div class="icon-bubble">📍</div><h3>Location</h3><p>26112 Pacific Hwy S<br/>Kent, Washington 98032</p></div>
-      <div class="info-card"><div class="icon-bubble">🕒</div><h3>Hours</h3><p>7 Days a Week: 8AM – 9PM</p></div>
-      <div class="info-card"><div class="icon-bubble">📞</div><h3>Call Us</h3><p>(206)651-7514<br/>For Menu Details</p></div>
+      <div class="info-card"><div class="icon-bubble">📍</div>
+        <h3><span data-i18n-en>Location</span><span data-i18n-es>Ubicación</span></h3>
+        <p>26112 Pacific Hwy S<br/>Kent, WA 98032</p>
+      </div>
+      <div class="info-card"><div class="icon-bubble">🕒</div>
+        <h3><span data-i18n-en>Hours</span><span data-i18n-es>Horario</span></h3>
+        <p><span data-i18n-en>Open Daily · Closes 9 PM</span><span data-i18n-es>Abierto Todos los Días · Cierra 9 PM</span></p>
+      </div>
+      <div class="info-card"><div class="icon-bubble">📞</div>
+        <h3><span data-i18n-en>Call Us</span><span data-i18n-es>Llámanos</span></h3>
+        <p>(206) 651-7514</p>
+      </div>
     </div>
     <div class="call-cta">
-      <a href="tel:+2066517514" class="btn">📞 Call to Place an Order</a>
+      <a href="tel:+12066517514" class="btn">📞 <span data-i18n-en>Call to Place an Order</span><span data-i18n-es>Llama para Ordenar</span></a>
     </div>
   </div>
 </section>
 
 <footer>
   <span class="brand">Pasteleria Y Panaderia La Ideal 2</span>
-  Baked fresh daily with love. © <span id="y"></span> All rights reserved.
-  <script>document.getelementById('y').textContent=new Date().getFullYear()</script>
+  <span data-i18n-en>Baked fresh daily with love.</span>
+  <span data-i18n-es>Horneado fresco cada día con amor.</span>
+  © <span id="y"></span> · 26112 Pacific Hwy S, Kent, WA 98032 · (206) 651-7514
 </footer>
 
 <script>
-const images = [
-    "assets/bread.jpg",
-    "assets/bun.jpg",
-    "assets/bunch.jpg",
-    "assets/buns.jpg",
-    "assets/cakes (1).jpg",
-    "assets/donut.jpg",
-    "assets/dough.jpg",
-    "assets/long.jpg",
-    "assets/milkjello.jpg",
-    "assets/more.jpg",
-    "assets/overlook2.jpg",
-    "assets/overlook3.jpg",
-    "assets/overlook4.jpg",
-    "assets/puff.jpg",
-    "assets/strudel.jpg",
-    "assets/variety.jpg"
-];
-
-let currentImage = 0;
-const galleryImage = document.getElementById("galleryImage");
-
-setInterval(() => {
-    galleryImage.style.opacity = "0";
-
-    setTimeout(() => {
-        currentImage = (currentImage + 1) % images.length;
-        galleryImage.src = images[currentImage];
-        galleryImage.style.opacity = "1";
-    }, 300);
-
-}, 3000);
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const buttons = document.querySelectorAll('.lang-toggle button');
+  const setLang = (lang) => {
+    document.documentElement.lang = lang;
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    try { localStorage.setItem('laideal-lang', lang); } catch(e){}
+  };
+  buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+  let saved = null;
+  try { saved = localStorage.getItem('laideal-lang'); } catch(e){}
+  const initial = saved || ((navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en');
+  setLang(initial);
 </script>
 </body>
 </html>

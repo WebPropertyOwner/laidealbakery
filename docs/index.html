@@ -36,348 +36,1118 @@
     rel="stylesheet"
   />
 
-  <style>:root {
-  --cream: #fff8f0;
-  --cream-2: #f9ecd8;
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  --rose: #d95f59;
-  --rose-dark: #b9443f;
+  <title>Pasteleria Y Panaderia La Ideal 2 — Fresh Mexican Bakery in Kent, WA</title>
 
-  --caramel: #c48a42;
-  --caramel-dark: #9c6426;
+  <meta
+    name="description"
+    content="Authentic Mexican bakery in Kent, WA. Fresh conchas, pan dulce, cakes, cookies, flan, and coffee — baked daily. Panadería mexicana auténtica."
+  />
 
-  --chocolate: #2e1b12;
-  --ink: #29160d;
-  --muted: #6f5b4f;
+  <meta
+    property="og:title"
+    content="Pasteleria Y Panaderia La Ideal 2"
+  />
 
-  --shadow-sm: 0 6px 18px rgba(0,0,0,0.06);
-  --shadow-md: 0 14px 40px rgba(0,0,0,0.10);
-  --shadow-lg: 0 24px 70px rgba(0,0,0,0.14);
-}
+  <meta
+    property="og:description"
+    content="Freshly baked Mexican breads, pastries, and cakes in Kent, WA. Pan recién horneado todos los días."
+  />
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/variety.jpg" />
 
-html {
-  scroll-behavior: smooth;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
 
-body {
-  font-family: "Nunito", system-ui, sans-serif;
-  color: var(--ink);
-  background: var(--cream);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-/* Typography */
-h1, h2, h3 {
-  font-family: "Fraunces", Georgia, serif;
-  color: var(--chocolate);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
+ <style>
+    :root {
+      --cream: #fdf6ec;
+      --cream-2: #f7ead4;
+      --rose: #c96b6b;
+      --rose-dark: #a14848;
+      --caramel: #b07a3b;
+      --caramel-dark: #8a5c25;
+      --chocolate: #3b2418;
+      --ink: #2a1a12;
+      --muted: #7a5f4f;
+    }
 
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
-  font-weight: 700;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-h2 {
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 700;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-h3 {
-  font-size: 1.35rem;
-}
+    body {
+      font-family: "Nunito", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-p {
-  color: var(--muted);
-}
+    h1,
+    h2,
+    h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--chocolate);
+    }
 
-.script {
-  font-family: "Caveat", cursive;
-  color: var(--rose);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+    }
 
-/* Links */
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
 
-/* NAVBAR */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 248, 240, 0.85);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
+    h3 {
+      font-size: 1.35rem;
+    }
 
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .script {
+      font-family: "Caveat", cursive;
+      color: var(--rose);
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
 
-.brand {
-  font-family: "Fraunces", serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.brand span {
-  color: var(--rose);
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.nav-links {
-  display: none;
-  gap: 2rem;
-  font-weight: 600;
-}
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(253, 246, 236, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(176, 122, 59, 0.15);
+    }
 
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
-}
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      gap: 1rem;
+    }
 
-.nav-links a {
-  position: relative;
-}
+    .brand {
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--chocolate);
+    }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background: var(--rose);
-  transition: 0.3s ease;
-}
+    .brand span {
+      color: var(--rose);
+    }
 
-.nav-links a:hover::after {
-  width: 100%;
-}
+    .nav-links {
+      display: none;
+      gap: 2rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
 
-/* BUTTONS */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
+    .nav-links a:hover {
+      color: var(--rose);
+    }
 
-  color: #fff;
-  background: linear-gradient(135deg, var(--rose), var(--rose-dark));
-  box-shadow: var(--shadow-md);
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
+    .lang-toggle {
+      display: inline-flex;
+      background: #fff;
+      border: 1px solid rgba(176, 122, 59, 0.3);
+      border-radius: 999px;
+      padding: 3px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
 
-.btn-outline {
-  background: transparent;
-  color: var(--chocolate);
-  border: 2px solid var(--caramel);
-}
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      cursor: pointer;
+      color: var(--muted);
+      font-weight: 700;
+    }
 
-/* HERO */
-.hero {
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  position: relative;
+    .lang-toggle button.active {
+      background: var(--rose);
+      color: #fff;
+    }
 
-  background:
-    linear-gradient(90deg,
-      rgba(255,248,240,0.95),
-      rgba(255,248,240,0.6)
-    ),
-    url("assets/variety.jpg") center/cover no-repeat;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--rose);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      box-shadow: 0 6px 20px rgba(201, 107, 107, 0.25);
+    }
 
-.hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 6rem 1.5rem;
-}
+    .btn:hover {
+      background: var(--rose-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(201, 107, 107, 0.35);
+    }
 
-.hero-content {
-  max-width: 650px;
-}
+    .btn-outline {
+      background: transparent;
+      color: var(--chocolate);
+      border: 2px solid var(--caramel);
+      box-shadow: none;
+    }
 
-.hero p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
+    .btn-outline:hover {
+      background: var(--caramel);
+      color: #fff;
+    }
 
-/* SECTION */
-section {
-  padding: 5rem 1.5rem;
-  position: relative;
-}
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(253, 246, 236, 0.85),
+          rgba(247, 234, 212, 0.7)
+        ),
+        url("assets/variety.jpg") center/cover no-repeat;
+      padding: 6rem 1.5rem;
+      overflow: hidden;
+    }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
 
-/* SECTION HEADER */
-.section-head {
-  text-align: center;
-  margin-bottom: 3rem;
-}
+    .hero-content {
+      max-width: 680px;
+    }
 
-.section-head p {
-  max-width: 600px;
-  margin: 1rem auto 0;
-}
+    .hero h1 {
+      margin: 1rem 0 1.5rem;
+    }
 
-/* CARDS */
-.card, .why-card, .testi {
-  background: rgba(255,255,255,0.9);
-  border-radius: 24px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(0,0,0,0.05);
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
 
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
-.card:hover,
-.why-card:hover,
-.testi:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-}
+    .float {
+      position: absolute;
+      opacity: 0.6;
+      font-size: 3rem;
+      animation: float 6s ease-in-out infinite;
+    }
 
-.card-img {
-  height: 240px;
-  overflow: hidden;
-}
+    .float.f1 {
+      top: 12%;
+      right: 8%;
+    }
 
-.card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
+    .float.f2 {
+      bottom: 18%;
+      right: 18%;
+      animation-delay: 2s;
+    }
 
-.card:hover img {
-  transform: scale(1.05);
-}
+    .float.f3 {
+      top: 30%;
+      right: 30%;
+      animation-delay: 4s;
+      display: none;
+    }
 
-.card-body {
-  padding: 1.5rem;
-}
+    @media (min-width: 900px) {
+      .float.f3 {
+        display: block;
+      }
+    }
 
-/* WHY SECTION */
-.why {
-  background: linear-gradient(180deg, var(--cream), var(--cream-2));
-}
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0) rotate(-5deg);
+      }
 
-/* ICON */
-.icon-bubble {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    section {
+      padding: 5rem 1.5rem;
+    }
 
-  color: white;
-  background: linear-gradient(135deg, var(--rose), var(--caramel));
-  box-shadow: var(--shadow-sm);
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* STORY */
-.story {
-  display: grid;
-  gap: 3rem;
-}
+    .section-head {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
 
-@media (min-width: 900px) {
-  .story {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+    .section-head .script {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
 
-.story img {
-  border-radius: 18px;
-  box-shadow: var(--shadow-md);
-}
+    .section-head p {
+      color: var(--muted);
+      max-width: 640px;
+      margin: 1rem auto 0;
+      font-size: 1.05rem;
+    }
 
-/* TESTIMONIALS */
-.testi {
-  padding: 2rem;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
 
-.stars {
-  color: #e6b653;
-  margin-bottom: 1rem;
-}
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(59, 36, 24, 0.06);
+      transition: transform 0.35s, box-shadow 0.35s;
+    }
 
-/* VISIT */
-.visit {
-  background: var(--chocolate);
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(59, 36, 24, 0.12);
+    }
 
-.visit p {
-  color: rgba(255,255,255,0.75);
-}
+    .card-img {
+      height: 240px;
+      overflow: hidden;
+    }
 
-/* GALLERY */
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s;
+    }
+
+    .card:hover .card-img img {
+      transform: scale(1.08);
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-body h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .card-body p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .why {
+      background: linear-gradient(
+        180deg,
+        var(--cream) 0%,
+        var(--cream-2) 100%
+      );
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .why-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(59, 36, 24, 0.05);
+    }
+
+    .icon-bubble {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        var(--rose),
+        var(--caramel)
+      );
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .story {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .story img {
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(59, 36, 24, 0.15);
+    }
+
+    .story p {
+      color: var(--muted);
+      margin-top: 1.5rem;
+      font-size: 1.05rem;
+    }
+    
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .testi {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(59, 36, 24, 0.05);
+    }
+
+    .stars {
+      color: #e6b653;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .testi-quote {
+      font-style: italic;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .testi-name {
+      font-weight: 700;
+      color: var(--caramel-dark);
+    }
+
+    .visit {
+      background: var(--chocolate);
+      color: #f7ead4;
+    }
+
+    .visit h2 {
+      color: #fff;
+    }
+
+    .visit .script {
+      color: #f3b9b9;
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .visit-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .info-card .icon-bubble {
+      background: linear-gradient(
+        135deg,
+        #f3b9b9,
+        #e6b653
+      );
+    }
+
+    .info-card h3 {
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-card p {
+      color: #e8d5b8;
+      font-size: 0.95rem;
+    }
+
+    .call-cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .call-cta .btn {
+      font-size: 1.1rem;
+      padding: 1rem 2.25rem;
+    }
+
+    .gallery {
+      background: var(--cream);
+    }
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .gallery-grid img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 14px;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.03);
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      background: #1f120a;
+      color: #c9b39a;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer .brand {
+      color: #fff;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    [data-i18n-es] {
+      display: none;
+    }
+
+    html[lang="es"] [data-i18n-en] {
+      display: none;
+    }
+
+    html[lang="es"] [data-i18n-es] {
+      display: inline;
+    }
+
+    html[lang="es"] [data-i18n-es].block {
+      display: block;
+    }
+    {
+--cream: #fff8f0;
+--cream-2: #f9ecd8;
+
+--rose: #d95f59;
+--rose-dark: #b9443f;
+
+--caramel: #c48a42;
+--caramel-dark: #9c6426;
+
+--chocolate: #2e1b12;
+--ink: #29160d;
+--muted: #6f5b4f;
 }
 
-/* FOOTER */
+/* Better typography */
+
+h1 {
+font-weight: 700;
+letter-spacing: -0.03em;
+}
+
+h2 {
+font-weight: 700;
+letter-spacing: -0.02em;
+}
+
+.hero h1 {
+max-width: 10ch;
+}
+
+/* Premium navigation */
+
+.nav {
+background: rgba(255, 248, 240, 0.85);
+backdrop-filter: blur(16px);
+box-shadow: 0 4px 20px rgba(59, 36, 24, 0.05);
+}
+
+.nav-links a {
+position: relative;
+}
+
+.nav-links a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -6px;
+
+width: 0;
+height: 2px;
+
+background: var(--rose);
+transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+/* Better buttons */
+
+.btn {
+background: linear-gradient(
+135deg,
+var(--rose),
+var(--rose-dark)
+);
+
+box-shadow:
+0 10px 25px rgba(217, 95, 89, 0.25);
+
+transition: all 0.3s ease;
+}
+
+.btn {
+transform: translateY(-3px) scale(1.02);
+
+box-shadow:
+0 16px 40px rgba(217, 95, 89, 0.35);
+}
+
+/* Hero improvements */
+
+.hero {
+background:
+linear-gradient(
+90deg,
+rgba(255, 248, 240, 0.95) 0%,
+rgba(255, 248, 240, 0.75) 45%,
+rgba(255, 248, 240, 0.35) 100%
+),
+url("assets/variety.jpg")
+center/cover no-repeat;
+}
+
+.hero::after {
+content: "";
+
+position: absolute;
+inset: 0;
+
+background:
+radial-gradient(
+circle at top right,
+rgba(217, 95, 89, 0.12),
+transparent 40%
+);
+
+pointer-events: none;
+}
+
+/* Better sections */
+
+section {
+position: relative;
+}
+
+section::before {
+content: "";
+
+position: absolute;
+
+left: 50%;
+top: 0;
+
+width: 120px;
+height: 4px;
+
+transform: translateX(-50%);
+
+border-radius: 999px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+var(--rose),
+transparent
+);
+}
+
+/* Softer textured background */
+
+.why {
+background:
+radial-gradient(
+circle at top left,
+rgba(217, 95, 89, 0.08),
+transparent 40%
+),
+linear-gradient(
+180deg,
+var(--cream),
+var(--cream-2)
+);
+}
+
+/* Premium cards */
+
+.card,
+.why-card,
+.testi {
+background: rgba(255, 255, 255, 0.92);
+
+backdrop-filter: blur(8px);
+
+border: 1px solid rgba(217, 95, 89, 0.12);
+
+border-radius: 28px;
+
+box-shadow:
+0 10px 30px rgba(59, 36, 24, 0.08),
+0 2px 8px rgba(59, 36, 24, 0.04);
+
+transition: all 0.35s ease;
+}
+
+.card,
+.why-card,
+.testi {
+transform: translateY(-10px);
+
+box-shadow:
+0 25px 60px rgba(59, 36, 24, 0.14),
+0 10px 25px rgba(59, 36, 24, 0.08);
+}
+
+/* Better images */
+
+.story img,
+.gallery-grid img,
+.card-img img {
+border: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Gallery improvements */
+
+.gallery-grid {
+grid-auto-flow: dense;
+}
+
+.gallery-grid img(3),
+.gallery-grid img(7) {
+grid-column: span 2;
+aspect-ratio: 2 / 1;
+}
+
+/* More premium icon bubbles */
+
+.icon-bubble {
+background:
+linear-gradient(
+135deg,
+var(--rose),
+var(--caramel)
+);
+
+box-shadow:
+0 10px 25px rgba(201, 107, 107, 0.25);
+}
+
+/* Visit section glow */
+
+.visit {
+position: relative;
+overflow: hidden;
+}
+
+.visit::before {
+content: "";
+
+position: absolute;
+
+width: 500px;
+height: 500px;
+
+top: -250px;
+right: -250px;
+
+border-radius: 50%;
+
+background:
+radial-gradient(
+circle,
+rgba(255,255,255,0.08),
+transparent 70%
+);
+}
+
+/* Better info cards */
+
+.info-card {
+transition: all 0.3s ease;
+}
+
+.info-card {
+transform: translateY(-8px);
+
+background: rgba(255,255,255,0.1);
+}
+
+/* Footer upgrade */
+
 footer {
-  background: #1f120a;
-  color: #c9b39a;
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.08);
+border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Floating bakery emojis */
+
+.float {
+filter:
+drop-shadow(
+0 10px 20px rgba(0,0,0,0.12)
+);
 }
   </style>
+  
+
+  
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">La Ideal <span>2</span></div>
+    <div class="nav-links">
+      <a href="#products"><span data-i18n-en>Products</span><span data-i18n-es>Productos</span></a>
+      <a href="#story"><span data-i18n-en>Our Story</span><span data-i18n-es>Nuestra Historia</span></a>
+      <a href="#visit"><span data-i18n-en>Visit</span><span data-i18n-es>Visítanos</span></a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
+      <a href="tel:+12066517514" class="btn"><span data-i18n-en>Call</span><span data-i18n-es>Llamar</span></a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="float f1">🥐</span>
+  <span class="float f2">☕</span>
+  <span class="float f3">🫓</span>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="script">
+        <span data-i18n-en>Freshly baked every morning</span>
+        <span data-i18n-es>Recién horneado cada mañana</span>
+      </span>
+      <h1>
+        <span data-i18n-en>Tradition you can taste, baked with love.</span>
+        <span data-i18n-es>Tradición que puedes saborear, horneada con amor.</span>
+      </h1>
+      <p>
+        <span data-i18n-en>Authentic Mexican breads, cakes, cookies, and pastries — handmade daily in Kent, WA.</span>
+        <span data-i18n-es>Pan mexicano auténtico, pasteles, galletas y pan dulce — hecho a mano todos los días en Kent, WA.</span>
+      </p>
+      <div class="hero-cta">
+        <a href="tel:+12066517514" class="btn">📞 <span data-i18n-en>Call for Details</span><span data-i18n-es>Llame para más información</span></a>
+        <a href="#products" class="btn btn-outline"><span data-i18n-en>View Our Treats</span><span data-i18n-es>Ver Productos</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="products">
+  <div class="container">
+    <div class="section-head">
+      <span class="script"><span data-i18n-en>Our specialties</span><span data-i18n-es>Nuestras especialidades</span></span>
+      <h2><span data-i18n-en>Made fresh, every single day</span><span data-i18n-es>Hecho fresco, todos los días</span></h2>
+      <p>
+        <span data-i18n-en>From crusty artisan loaves to celebration cakes, every item is crafted in-house with care.</span>
+        <span data-i18n-es>Desde pan artesanal hasta pasteles de celebración, todo se elabora en casa con cariño.</span>
+      </p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="card-img"><img src="assets/cakes.jpg" alt="Custom celebration cakes" /></div><div class="card-body">
+        <h3><span data-i18n-en>Cakes &amp; Custom Cakes</span><span data-i18n-es>Pasteles y Pasteles a la Medida</span></h3>
+        <p><span data-i18n-en>Hand-decorated cakes for birthdays, graduations, and every celebration.</span><span data-i18n-es>Pasteles decorados a mano para cumpleaños, graduaciones y toda celebración.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/layered.jpg" alt="Sweet pastries" /></div><div class="card-body">
+        <h3><span data-i18n-en>Sweet Pastries</span><span data-i18n-es>Pan Dulce</span></h3>
+        <p><span data-i18n-en>Buttery, flaky, golden — layered cake, churros, and croissants straight from the oven.</span><span data-i18n-es>Mantecoso y hojaldrado — pastel en capas, churros y cuernitos recién salidos del horno.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/concha.jpg" alt="Fresh conchas" /></div><div class="card-body">
+        <h3><span data-i18n-en>Conchas</span><span data-i18n-es>Conchas</span></h3>
+        <p><span data-i18n-en>Soft, fluffy, classic — the kind of concha you remember from home.</span><span data-i18n-es>Suaves, esponjosas, clásicas — las conchas que recuerdas de casa.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/flan.jpg" alt="Traditional flan" /></div><div class="card-body">
+        <h3><span data-i18n-en>Traditional Flan</span><span data-i18n-es>Flan Tradicional</span></h3>
+        <p><span data-i18n-en>Creamy caramel custard — made the way abuela taught us.</span><span data-i18n-es>Cremoso flan de caramelo — hecho como nos enseñó la abuela.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/jello.jpg" alt="Jello cups" /></div><div class="card-body">
+        <h3><span data-i18n-en>Gelatins &amp; Specials</span><span data-i18n-es>Gelatinas y Especiales</span></h3>
+        <p><span data-i18n-en>Milk gelatins in a variety of shapes and flavors.</span><span data-i18n-es>Gelatinas de leche en variedad de formas y sabores.</span></p>
+      </div></article>
+      <article class="card"><div class="card-img"><img src="assets/cookie.jpg" alt="Cookies" /></div><div class="card-body">
+        <h3><span data-i18n-en>Cookies</span><span data-i18n-es>Galletas</span></h3>
+        <p><span data-i18n-en>A wide assortment of fresh-baked cookies, every day.</span><span data-i18n-es>Gran variedad de galletas recién horneadas, todos los días.</span></p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="script"><span data-i18n-en>Why choose us</span><span data-i18n-es>Por qué elegirnos</span></span>
+      <h2><span data-i18n-en>Quality baking, exceptional service</span><span data-i18n-es>Calidad y servicio excepcional</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="icon-bubble">👨‍🍳</div>
+        <h3><span data-i18n-en>Traditional Recipes</span><span data-i18n-es>Recetas Tradicionales</span></h3>
+        <p><span data-i18n-en>Time-honored recipes crafted with skill and authenticity.</span><span data-i18n-es>Recetas de toda la vida elaboradas con maestría y autenticidad.</span></p>
+      </div>
+      <div class="why-card"><div class="icon-bubble">🏡</div>
+        <h3><span data-i18n-en>Community Favorite</span><span data-i18n-es>Favorito del Vecindario</span></h3>
+        <p><span data-i18n-en>Proudly serving Kent families and celebrations for years.</span><span data-i18n-es>Sirviendo con orgullo a las familias de Kent por años.</span></p>
+      </div>
+      <div class="why-card"><div class="icon-bubble">💛</div>
+        <h3><span data-i18n-en>Crafted with Care</span><span data-i18n-es>Hecho con Cariño</span></h3>
+        <p><span data-i18n-en>Every loaf and dessert reflects attention to detail.</span><span data-i18n-es>Cada pan y postre refleja atención al detalle.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section id="story">
+  <div class="container story">
+    <img src="assets/zoom.jpg" alt="Inside our bakery" />
+    <div>
+      <span class="script"><span data-i18n-en>Our story</span><span data-i18n-es>Nuestra historia</span></span>
+      <h2><span data-i18n-en>Generations of baking, one neighborhood at a time.</span><span data-i18n-es>Generaciones horneando, un vecindario a la vez.</span></h2>
+      <p>
+        <span data-i18n-en>At Pasteleria Y Panaderia La Ideal 2, baking isn't just a craft — it's a family tradition. Every recipe carries the warmth of home kitchens and the love of feeding the people you care about.</span>
+        <span data-i18n-es>En Pastelería y Panadería La Ideal 2, hornear no es solo un oficio — es una tradición familiar. Cada receta lleva el calor de la cocina de casa y el amor de alimentar a los tuyos.</span>
+      </p>
+      <p>
+        <span data-i18n-en>We knead, shape, and bake everything by hand. Walk in and you'll smell it before you see it — fresh bread, melted butter, and a little bit of childhood.</span>
+        <span data-i18n-es>Amasamos, formamos y horneamos todo a mano. Al entrar lo olerás antes de verlo — pan recién hecho, mantequilla derretida y un toque de infancia.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <div class="section-head">
+      <span class="script"><span data-i18n-en>From our oven</span><span data-i18n-es>Desde nuestro horno</span></span>
+      <h2><span data-i18n-en>A peek at what's in store</span><span data-i18n-es>Una probadita de lo que tenemos</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <img src="assets/bread.jpg" alt="Fresh bread" loading="lazy" />
+      <img src="assets/bun.jpg" alt="Buns" loading="lazy" />
+      <img src="assets/buns.jpg" alt="Assorted buns" loading="lazy" />
+      <img src="assets/donut.jpg" alt="Donuts" loading="lazy" />
+      <img src="assets/puff.jpg" alt="Puff pastry" loading="lazy" />
+      <img src="assets/strudel.jpg" alt="Strudel" loading="lazy" />
+      <img src="assets/milkjello.jpg" alt="Milk gelatin" loading="lazy" />
+      <img src="assets/crossant.jpg" alt="Croissants" loading="lazy" />
+      <img src="assets/dough.jpg" alt="Dough" loading="lazy" />
+      <img src="assets/more.jpg" alt="More" loading="lazy" />
+      <img src="assets/overlook2.jpg" alt="Store" loading="lazy" />
+      <img src="assets/overlook3.jpg" alt="Store3" loading="lazy" />
+      <img src="assets/overlook4.jpg" alt="Store4" loading="lazy" />
+      <img src="assets/zoom.jpg" alt="Zoom" loading="lazy" />
+      <img src="assets/bunch.jpg" alt="Bunch" loading="lazy" />
+      <img src="assets/concha.jpg" alt="Concha" loading="lazy" />
+      <img src="assets/cookie.jpg" alt="Cookie" loading="lazy" />
+      <img src="assets/zoom.jpg" alt="Zoom" loading="lazy" />
+      <img src="assets/layered.jpg" alt="Layers" loading="lazy" />
+      <img src="assets/long.jpg" alt="long" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="script"><span data-i18n-en>Kind words</span><span data-i18n-es>Lo que dicen</span></span>
+      <h2><span data-i18n-en>What our customers say</span><span data-i18n-es>Lo que dicen nuestros clientes</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi"><div class="stars">★★★★★</div>
+        <p class="testi-quote">
+          <span data-i18n-en>"Bread is ALWAYS fresh and the options are endless! I have to limit myself because I want one of everything. Service is quick and they make sure your fresh bread doesn't get squished."</span>
+          <span data-i18n-es>"¡El pan SIEMPRE está fresco y las opciones son infinitas! Me tengo que limitar porque quiero uno de cada uno. El servicio es rápido y se aseguran de que tu pan llegue perfecto."</span>
+        </p>
+        <div class="testi-name">— Alondra M.</div>
+      </div>
+      <div class="testi"><div class="stars">★★★★★</div>
+        <p class="testi-quote">
+          <span data-i18n-en>"I've tried many Mexican bread shops and this one NEVER disappoints. The conchas are always soft and the bolillos are basically homemade white bread. 1000/10."</span>
+          <span data-i18n-es>"He probado muchas panaderías mexicanas y esta NUNCA decepciona. Las conchas siempre están suaves y los bolillos son como pan blanco casero. 1000/10."</span>
+        </p>
+        <div class="testi-name">— Bianca G.</div>
+      </div>
+      <div class="testi"><div class="stars">★★★★★</div>
+        <p class="testi-quote">
+          <span data-i18n-en>"Their bread is fresh and delicious. Cashiers are welcoming and quick. Best pan dulce and bolillos south of Seattle."</span>
+          <span data-i18n-es>"Su pan es fresco y delicioso. Las cajeras son amables y rápidas. El mejor pan dulce y bolillos al sur de Seattle."</span>
+        </p>
+        <div class="testi-name">— Dalia F.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="container">
+    <div class="section-head">
+      <span class="script"><span data-i18n-en>Come say hello</span><span data-i18n-es>Ven a saludarnos</span></span>
+      <h2><span data-i18n-en>Visit our bakery</span><span data-i18n-es>Visita nuestra panadería</span></h2>
+      <p style="color:#e8d5b8">
+        <span data-i18n-en>We'd love to bake for you — stop in or give us a call.</span>
+        <span data-i18n-es>Nos encantaría hornear para ti — pásate o llámanos.</span>
+      </p>
+    </div>
+    <div class="visit-grid">
+      <div class="info-card"><div class="icon-bubble">📍</div>
+        <h3><span data-i18n-en>Location</span><span data-i18n-es>Ubicación</span></h3>
+        <p>26112 Pacific Hwy S<br/>Kent, WA 98032</p>
+      </div>
+      <div class="info-card"><div class="icon-bubble">🕒</div>
+        <h3><span data-i18n-en>Hours</span><span data-i18n-es>Horario</span></h3>
+        <p><span data-i18n-en>Open Daily At 8 AM · Closes 9 PM</span><span data-i18n-es>Abierto Todos los Días 8 AM · Cierra 9 PM</span></p>
+      </div>
+      <div class="info-card"><div class="icon-bubble">📞</div>
+        <h3><span data-i18n-en>Call Us</span><span data-i18n-es>Llámanos</span></h3>
+        <p>(206) 651-7514</p>
+      </div>
+    </div>
+    <div class="call-cta">
+      <a href="tel:+12066517514" class="btn">📞 <span data-i18n-en>Call For More Details</span><span data-i18n-es>Llame para más detalles</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="brand">Pasteleria Y Panaderia La Ideal 2</span>
+  <span data-i18n-en>Baked fresh daily with love.</span>
+  <span data-i18n-es>Horneado fresco cada día con amor.</span>
+  © <span id="y"></span> · 26112 Pacific Hwy S, Kent, WA 98032 · (206) 651-7514
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const buttons = document.querySelectorAll('.lang-toggle button');
+  const setLang = (lang) => {
+    document.documentElement.lang = lang;
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    try { localStorage.setItem('laideal-lang', lang); } catch(e){}
+  };
+  buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+  let saved = null;
+  try { saved = localStorage.getItem('laideal-lang'); } catch(e){}
+  const initial = saved || ((navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en');
+  setLang(initial);
+</script>
+</body>
+</html>
+
   
 </head>
 

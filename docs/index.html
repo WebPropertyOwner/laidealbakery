@@ -586,7 +586,284 @@
     html[lang="es"] [data-i18n-es].block {
       display: block;
     }
+    {
+--cream: #fff8f0;
+--cream-2: #f9ecd8;
+
+--rose: #d95f59;
+--rose-dark: #b9443f;
+
+--caramel: #c48a42;
+--caramel-dark: #9c6426;
+
+--chocolate: #2e1b12;
+--ink: #29160d;
+--muted: #6f5b4f;
+}
+
+/* Better typography */
+
+h1 {
+font-weight: 700;
+letter-spacing: -0.03em;
+}
+
+h2 {
+font-weight: 700;
+letter-spacing: -0.02em;
+}
+
+.hero h1 {
+max-width: 10ch;
+}
+
+/* Premium navigation */
+
+.nav {
+background: rgba(255, 248, 240, 0.85);
+backdrop-filter: blur(16px);
+box-shadow: 0 4px 20px rgba(59, 36, 24, 0.05);
+}
+
+.nav-links a {
+position: relative;
+}
+
+.nav-links a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -6px;
+
+width: 0;
+height: 2px;
+
+background: var(--rose);
+transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+/* Better buttons */
+
+.btn {
+background: linear-gradient(
+135deg,
+var(--rose),
+var(--rose-dark)
+);
+
+box-shadow:
+0 10px 25px rgba(217, 95, 89, 0.25);
+
+transition: all 0.3s ease;
+}
+
+.btn {
+transform: translateY(-3px) scale(1.02);
+
+box-shadow:
+0 16px 40px rgba(217, 95, 89, 0.35);
+}
+
+/* Hero improvements */
+
+.hero {
+background:
+linear-gradient(
+90deg,
+rgba(255, 248, 240, 0.95) 0%,
+rgba(255, 248, 240, 0.75) 45%,
+rgba(255, 248, 240, 0.35) 100%
+),
+url("assets/variety.jpg")
+center/cover no-repeat;
+}
+
+.hero::after {
+content: "";
+
+position: absolute;
+inset: 0;
+
+background:
+radial-gradient(
+circle at top right,
+rgba(217, 95, 89, 0.12),
+transparent 40%
+);
+
+pointer-events: none;
+}
+
+/* Better sections */
+
+section {
+position: relative;
+}
+
+section::before {
+content: "";
+
+position: absolute;
+
+left: 50%;
+top: 0;
+
+width: 120px;
+height: 4px;
+
+transform: translateX(-50%);
+
+border-radius: 999px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+var(--rose),
+transparent
+);
+}
+
+/* Softer textured background */
+
+.why {
+background:
+radial-gradient(
+circle at top left,
+rgba(217, 95, 89, 0.08),
+transparent 40%
+),
+linear-gradient(
+180deg,
+var(--cream),
+var(--cream-2)
+);
+}
+
+/* Premium cards */
+
+.card,
+.why-card,
+.testi {
+background: rgba(255, 255, 255, 0.92);
+
+backdrop-filter: blur(8px);
+
+border: 1px solid rgba(217, 95, 89, 0.12);
+
+border-radius: 28px;
+
+box-shadow:
+0 10px 30px rgba(59, 36, 24, 0.08),
+0 2px 8px rgba(59, 36, 24, 0.04);
+
+transition: all 0.35s ease;
+}
+
+.card,
+.why-card,
+.testi {
+transform: translateY(-10px);
+
+box-shadow:
+0 25px 60px rgba(59, 36, 24, 0.14),
+0 10px 25px rgba(59, 36, 24, 0.08);
+}
+
+/* Better images */
+
+.story img,
+.gallery-grid img,
+.card-img img {
+border: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Gallery improvements */
+
+.gallery-grid {
+grid-auto-flow: dense;
+}
+
+.gallery-grid img(3),
+.gallery-grid img(7) {
+grid-column: span 2;
+aspect-ratio: 2 / 1;
+}
+
+/* More premium icon bubbles */
+
+.icon-bubble {
+background:
+linear-gradient(
+135deg,
+var(--rose),
+var(--caramel)
+);
+
+box-shadow:
+0 10px 25px rgba(201, 107, 107, 0.25);
+}
+
+/* Visit section glow */
+
+.visit {
+position: relative;
+overflow: hidden;
+}
+
+.visit::before {
+content: "";
+
+position: absolute;
+
+width: 500px;
+height: 500px;
+
+top: -250px;
+right: -250px;
+
+border-radius: 50%;
+
+background:
+radial-gradient(
+circle,
+rgba(255,255,255,0.08),
+transparent 70%
+);
+}
+
+/* Better info cards */
+
+.info-card {
+transition: all 0.3s ease;
+}
+
+.info-card {
+transform: translateY(-8px);
+
+background: rgba(255,255,255,0.1);
+}
+
+/* Footer upgrade */
+
+footer {
+border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Floating bakery emojis */
+
+.float {
+filter:
+drop-shadow(
+0 10px 20px rgba(0,0,0,0.12)
+);
+}
   </style>
+  
 </head>
 
 <body>

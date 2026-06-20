@@ -537,18 +537,19 @@
     .gallery {
       background: var(--cream);
     }
-
-   .gallery-grid {
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .gallery-grid img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 14px;
+  transition: transform 0.4s;
 }
 
     .gallery-grid img:hover {
@@ -1011,6 +1012,13 @@ drop-shadow(
       <img src="assets/overlook3.jpg" alt="Store3" loading="lazy" />
       <img src="assets/overlook4.jpg" alt="Store4" loading="lazy" />
       <img src="assets/zoom.jpg" alt="Zoom" loading="lazy" />
+      <img src="assets/bunch.jpg" alt="Bunch" loading="lazy" />
+      <img src="assets/concha.jpg" alt="Concha" loading="lazy" />
+      <img src="assets/cookie.jpg" alt="Cookie" loading="lazy" />
+      <img src="assets/jello.jpg" alt="Jello" loading="lazy" />
+      <img src="assets/zoom.jpg" alt="Zoom" loading="lazy" />
+      <img src="assets/layered.jpg" alt="Layers" loading="lazy" />
+      <img src="assets/long.jpg" alt="long" loading="lazy" />
     </div>
   </div>
 </section>

@@ -17,8 +17,4 @@ It's pure HTML/CSS — no build step, no server, no dependencies.
 Edit `docs/index.html` (text and prices) or swap images in `docs/assets/`.
 Push to GitHub and the live site updates automatically.
 
-## What to customize
-
-- Phone number: search `+10000000000` and `(000) 000-0000` in `index.html`
-- Address + hours: in the "Visit Us" section
-- Prices: in the "Menu" section
+## NOT NEEDING THIS SITE, PLACE SAID MAYBE LATER, SO PROLLY NOT ##
